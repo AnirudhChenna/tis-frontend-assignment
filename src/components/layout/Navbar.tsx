@@ -29,12 +29,12 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { label: 'Overview', href: '#overview' },
-    { label: 'Philosophy', href: '#philosophy' },
-    { label: 'Olympic Sports', href: '#sports' },
-    { label: 'Boarding Life', href: '#boarding' },
-    { label: 'Accreditations', href: '#accreditations' },
-    { label: 'Testimonials', href: '#testimonials' },
+    { label: 'Home', href: '#overview' },
+    { label: 'About', href: '#about' },
+    { label: 'Academics', href: '#academics' },
+    { label: 'Campus / Facilities', href: '#facilities' },
+    { label: 'Why TIS', href: '#why-tis' },
+    { label: 'Life at TIS', href: '#life-at-tis' },
     { label: 'Admissions', href: '#admissions' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -51,7 +51,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             </span>
             <span className="hidden md:inline text-amber-300/40">|</span>
             <span className="hidden md:inline text-white/90">
-              Co-Educational Residential Boarding (Grades IV to XII)
+              Co-Educational Residential Boarding (Classes IV to XII)
             </span>
           </div>
 
@@ -110,14 +110,15 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[13px] font-medium text-[#4a5160] hover:text-[#940a24] dark:text-[#cbd5e1] dark:hover:text-[#d6b46b] transition-colors tracking-wide py-1"
+                className="relative text-[13px] font-medium text-[#4a5160] hover:text-[#940a24] dark:text-[#cbd5e1] dark:hover:text-[#d6b46b] transition-colors tracking-wide py-1 group/link"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#940a24] dark:bg-[#d6b46b] transition-all duration-200 group-hover/link:w-full" />
               </a>
             ))}
           </div>
@@ -143,14 +144,14 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               onClick={onOpenEnquiry}
               className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-[#940a24] hover:bg-[#74061a] text-white text-xs font-semibold tracking-wide transition-all shadow-sm cursor-pointer"
             >
-              <span>Enquire Now</span>
+              <span>Apply Now</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
 
             {/* Mobile Menu Trigger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-md border border-[#e5ded0] dark:border-[#24314c] text-[#171a21] dark:text-[#f8fafc] cursor-pointer"
+              className="xl:hidden p-2 rounded-md border border-[#e5ded0] dark:border-[#24314c] text-[#171a21] dark:text-[#f8fafc] cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -160,14 +161,14 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-[#e5ded0] dark:border-[#24314c] bg-white dark:bg-[#0e1728] px-4 pt-3 pb-6 space-y-3 mt-2">
+          <div className="xl:hidden border-t border-[#e5ded0] dark:border-[#24314c] bg-white dark:bg-[#0e1728] px-4 pt-3 pb-6 space-y-3 mt-2">
             <div className="grid grid-cols-2 gap-2 pt-2">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-3 py-2 text-sm font-medium text-[#4a5160] dark:text-[#cbd5e1] hover:text-[#940a24] hover:bg-[#f8f5ee] dark:hover:bg-[#162033] rounded-md transition-colors"
+                  className="px-3 py-2 text-xs font-medium text-[#4a5160] dark:text-[#cbd5e1] hover:text-[#940a24] hover:bg-[#f8f5ee] dark:hover:bg-[#162033] rounded-md transition-colors"
                 >
                   {link.label}
                 </a>
@@ -180,7 +181,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   setMobileMenuOpen(false);
                   if (onOpenEnquiry) onOpenEnquiry();
                 }}
-                className="w-full py-2.5 px-4 rounded-md bg-[#940a24] text-white text-sm font-semibold text-center tracking-wide"
+                className="w-full py-2.5 px-4 rounded-md bg-[#940a24] text-white text-xs font-semibold text-center tracking-wide"
               >
                 Apply Online &amp; Admissions Inquiry
               </button>

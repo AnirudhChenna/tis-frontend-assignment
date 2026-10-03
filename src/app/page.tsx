@@ -4,17 +4,19 @@ import React, { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
-import VerifiedMetrics from '@/components/home/VerifiedMetrics';
-import ModernGurukulPhilosophy from '@/components/home/ModernGurukulPhilosophy';
+import About from '@/components/home/About';
+import Academics from '@/components/home/Academics';
+import Facilities from '@/components/home/Facilities';
+import WhyTIS from '@/components/home/WhyTIS';
+import Activities from '@/components/home/Activities';
 import SportsAcademy from '@/components/home/SportsAcademy';
-import BoardingLife from '@/components/home/BoardingLife';
 import AccreditationsAwards from '@/components/home/AccreditationsAwards';
 import VerifiedTestimonials from '@/components/home/VerifiedTestimonials';
-import AdmissionsSection from '@/components/home/AdmissionsSection';
+import AdmissionsCTA from '@/components/home/AdmissionsCTA';
+import Contact from '@/components/home/Contact';
 import FAQSection from '@/components/home/FAQSection';
 import EnquiryModal from '@/components/home/EnquiryModal';
 import { Phone, MessageSquare } from 'lucide-react';
-import { SCHOOL_INFO } from '@/data/tisData';
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,40 +26,49 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fdfbf7] dark:bg-[#0b0f19] text-[#171a21] dark:text-[#f8fafc] transition-colors">
-      {/* Institutional Top Navbar */}
+      {/* 1. Navigation Bar */}
       <Navbar onOpenEnquiry={openEnquiryModal} />
 
       {/* Main Content Area */}
       <main className="flex-grow">
-        {/* 1. Hero Section */}
+        {/* 2. Hero Section */}
         <Hero onOpenEnquiry={openEnquiryModal} />
 
-        {/* 2. Verified Campus Metrics */}
-        <VerifiedMetrics />
+        {/* 3. About TIS Section */}
+        <About />
 
-        {/* 3. The Modern Gurukul Philosophy */}
-        <ModernGurukulPhilosophy />
+        {/* 4. Academics Section */}
+        <Academics />
 
-        {/* 4. Olympic Sports Foundation */}
+        {/* 5. Campus / Facilities Section */}
+        <Facilities />
+
+        {/* 6. Why Choose TIS Section */}
+        <WhyTIS />
+
+        {/* 7. Life at TIS / Activities Section */}
+        <Activities />
+
+        {/* 8. Sports Foundation Academy */}
         <SportsAcademy />
 
-        {/* 5. Boarding & Residential Pastoral Life */}
-        <BoardingLife />
-
-        {/* 6. Accreditations & Olympic Mentors */}
+        {/* 9. Accreditations & Olympic Mentors */}
         <AccreditationsAwards />
 
-        {/* 7. Verified Parent Testimonials */}
+        {/* 10. Testimonials Section */}
         <VerifiedTestimonials />
 
-        {/* 8. Admissions Roadmap & Registration Desk */}
-        <AdmissionsSection onOpenEnquiry={openEnquiryModal} />
+        {/* 11. Admissions CTA Section */}
+        <AdmissionsCTA onOpenEnquiry={openEnquiryModal} />
 
-        {/* 9. Frequently Asked Questions */}
+        {/* 12. Contact Section */}
+        <Contact />
+
+        {/* 13. Frequently Asked Questions */}
         <FAQSection />
       </main>
 
-      {/* Institutional Footer */}
+      {/* 14. Institutional Footer */}
       <Footer />
 
       {/* Interactive Quick-Enquiry Modal */}

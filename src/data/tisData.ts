@@ -1,4 +1,16 @@
-import { MetricItem, SportItem, TestimonialItem, AwardItem, DignitaryItem, FAQItem, AdmissionStep } from '@/types';
+import {
+  MetricItem,
+  SportItem,
+  TestimonialItem,
+  AwardItem,
+  DignitaryItem,
+  FAQItem,
+  AdmissionStep,
+  AcademicProgram,
+  FacilityItem,
+  WhyTISItem,
+  ActivityItem
+} from '@/types';
 
 export const SCHOOL_INFO = {
   name: "Tulas International School",
@@ -57,6 +69,234 @@ export const VERIFIED_METRICS: MetricItem[] = [
     label: "Global Partnerships",
     subtext: "International student exchange, Trinity speech, and MUN circuits",
     iconName: "Globe"
+  }
+];
+
+export const ACADEMIC_PROGRAMS: AcademicProgram[] = [
+  {
+    id: "primary",
+    title: "Primary Wing",
+    gradeSpan: "Classes IV to V (Ages 9 to 11)",
+    description: "Nurturing fundamental curiosity, phonetics, arithmetic reasoning, and experiential exploration in a warm pastoral environment.",
+    keyFeatures: [
+      "Activity-based foundational curriculum",
+      "Dedicated house mother care and gentle boarding transition",
+      "Early introduction to robotics, art, and music",
+      "Daily guided reading and spoken English refinement"
+    ],
+    image: "/images/tis/Image_1.0a814859.webp",
+    curriculumBadge: "CBSE Foundational Stage"
+  },
+  {
+    id: "middle",
+    title: "Middle School Wing",
+    gradeSpan: "Classes VI to VIII (Ages 11 to 14)",
+    description: "Developing analytical acumen, scientific inquiry, bilingual dexterity, and structured study routines with supervised evening preps.",
+    keyFeatures: [
+      "Experiential Science & Mathematics laboratory sessions",
+      "Mandatory selection of two sports disciplines",
+      "Trinity College London communication training",
+      "Introductory coding, French/Sanskrit linguistic options"
+    ],
+    image: "/images/tis/Image_2.0c5295c9.webp",
+    curriculumBadge: "CBSE Middle Preparatory"
+  },
+  {
+    id: "secondary",
+    title: "Secondary School Wing",
+    gradeSpan: "Classes IX to X (Ages 14 to 16)",
+    description: "Rigorous academic preparation aligning conceptual depth with CBSE Board examination excellence, balanced with competitive athletics.",
+    keyFeatures: [
+      "Comprehensive syllabus coverage and regular mock assessments",
+      "Faculty guided evening prep sessions in residential houses",
+      "Career aptitude mapping and psychometric guidance",
+      "Leadership roles in inter-house competitions and clubs"
+    ],
+    image: "/images/tis/ladyInPink.c358aa8f.png",
+    curriculumBadge: "CBSE All India Secondary"
+  },
+  {
+    id: "senior-secondary",
+    title: "Senior Secondary Wing",
+    gradeSpan: "Classes XI to XII (Ages 16 to 18)",
+    description: "Specialized streams in Science, Commerce, and Humanities with integrated coaching modules for competitive university admissions.",
+    keyFeatures: [
+      "Science (PCM/PCB) with advanced experimental laboratory hours",
+      "Commerce with Accountancy, Business Studies, Economics, and Maths",
+      "Humanities with Political Science, Psychology, History, and Sociology",
+      "Integrated guidance for JEE, NEET, CUET, CLAT, and SAT exams"
+    ],
+    image: "/images/tis/manInBlue.46316cbf.png",
+    curriculumBadge: "CBSE Senior School Certificate"
+  }
+];
+
+export const CAMPUS_FACILITIES: FacilityItem[] = [
+  {
+    id: "classrooms",
+    title: "Interactive Smart Classrooms",
+    category: "Academic Infrastructure",
+    description: "Spacious, climate-regulated lecture rooms equipped with digital interactive display boards and ergonomic individual seating.",
+    image: "/images/tis/Image_1.0a814859.webp",
+    specs: "Smart AV Boards, Wi-Fi 6, 25-Student Cap"
+  },
+  {
+    id: "laboratories",
+    title: "STEM & Robotics Innovation Center",
+    category: "Scientific Research",
+    description: "High-grade laboratories for Physics, Chemistry, Biology, and Robotics equipped with sensors, 3D printers, and test benches.",
+    image: "/images/tis/madeForFuture.e96fe7c1.png",
+    specs: "Modern Sensors, AI Toolkits, Safety Showers"
+  },
+  {
+    id: "library",
+    title: "Central Knowledge Resource Library",
+    category: "Academic Infrastructure",
+    description: "Extensive repository comprising over 15,000 volumes, international periodicals, reference encyclopedias, and high-speed digital research terminals.",
+    image: "/images/tis/Image_3.21dc9e69.webp",
+    specs: "15,000+ Titles, Quiet Reading Bays, E-Journals"
+  },
+  {
+    id: "sports-pavilion",
+    title: "Olympic Sports Complex",
+    category: "Athletics & Fitness",
+    description: "Multi-acre athletic arenas including an archery range, shooting gallery, riding paddocks, semi-Olympic pool, and squash courts.",
+    image: "/images/tis/archery.7a805345.png",
+    specs: "16+ Sports, DecoTurf, WSF Squash, Floodlit"
+  },
+  {
+    id: "hostels",
+    title: "Residential Boarding Houses",
+    category: "Pastoral Living",
+    description: "Segregated hostels for boys and girls with climate control, en-suite washrooms, laundry service, recreational lounges, and resident house masters.",
+    image: "/images/tis/ladyInPink.c358aa8f.png",
+    specs: "Biometric Access, 24*7 Wardens, Solar Water"
+  },
+  {
+    id: "dining",
+    title: "Nutritious Vegetarian Dining Hall",
+    category: "Pastoral Living",
+    description: "Hygienic multi-cuisine dining serving four wholesome, balanced meals daily, planned by clinical nutritionists and prepared in stainless steel kitchens.",
+    image: "/images/tis/Image_2.0c5295c9.webp",
+    specs: "100% Pure Veg, 4 Meals/Day, RO Filtration"
+  },
+  {
+    id: "infirmary",
+    title: "24*7 Medical Health Center",
+    category: "Health & Safety",
+    description: "On-campus clinical infirmary staffed with certified resident nurses, visiting physicians, observation beds, and an emergency ambulance on standby.",
+    image: "/images/tis/Image_3.21dc9e69.webp",
+    specs: "Resident Nursing, Emergency Ambulance, Isolation Bay"
+  },
+  {
+    id: "arts-centre",
+    title: "Performing Arts & Craft Pavilion",
+    category: "Creative Arts",
+    description: "Dedicated acoustic music studios, dance halls with full mirror walls, pottery kilns, and fine art workshops.",
+    image: "/images/tis/dance.88843edb.webp",
+    specs: "Acoustic Rooms, Pottery Kiln, Mirror Studios"
+  }
+];
+
+export const WHY_TIS_POINTS: WhyTISItem[] = [
+  {
+    id: "why-1",
+    title: "Academic Excellence & Supervised Preps",
+    shortDesc: "Individual attention with evening faculty preps ensuring top board performance.",
+    detailedText: "Our residential teachers supervise mandatory evening study preps in hostel study halls, offering immediate doubt resolution and personalized academic intervention.",
+    icon: "GraduationCap",
+    statBadge: "100% Board Pass Rate"
+  },
+  {
+    id: "why-2",
+    title: "6:1 Student to Teacher Ratio",
+    shortDesc: "One of India's most personalized educational and pastoral environments.",
+    detailedText: "With small batch sizes of maximum 25 students per section, teachers notice every learner's cognitive pace, strengths, and pastoral well-being.",
+    icon: "Users",
+    statBadge: "6:1 Mentor Ratio"
+  },
+  {
+    id: "why-3",
+    title: "16+ Olympic & Heritage Sports",
+    shortDesc: "Professional sports integrated as the fundamental pillar of daily routine.",
+    detailedText: "Every student trains under certified NIS coaches in disciplines including Compound Archery, 10m Shooting, Equestrian Dressage, Semi-Olympic Aquatics, and Squash.",
+    icon: "Trophy",
+    statBadge: "16+ Disciplines"
+  },
+  {
+    id: "why-4",
+    title: "The Modern Gurukul Ethos",
+    shortDesc: "Timeless Indian moral values fused with forward-thinking global competence.",
+    detailedText: "Mentors and students coexist as an extended family. Respect, self-discipline, humility, and environmental stewardship are lived realities rather than mere textbook concepts.",
+    icon: "Compass",
+    statBadge: "Est. 2012 Lineage"
+  },
+  {
+    id: "why-5",
+    title: "Pristine 22-Acre Pollution-Free Campus",
+    shortDesc: "Clean Himalayan mountain air fostering robust physical and mental wellness.",
+    detailedText: "Located along Chakrata Road in Dehradun away from urban vehicular congestion, providing a secure, quiet, and revitalizing atmosphere for growth.",
+    icon: "Trees",
+    statBadge: "22-Acre Green Campus"
+  },
+  {
+    id: "why-6",
+    title: "Global Leadership & Cultural Circuits",
+    shortDesc: "International collaborations, MUN summits, and Trinity certifications.",
+    detailedText: "Students build global confidence through Trinity College London speech assessments, national debating championships, and cross-cultural exchanges.",
+    icon: "Globe",
+    statBadge: "12+ Collaborations"
+  }
+];
+
+export const STUDENT_ACTIVITIES: ActivityItem[] = [
+  {
+    id: "act-pottery",
+    title: "Pottery & Ceramic Sculpture",
+    category: "arts",
+    description: "Hands-on wheel throwing, hand-building, glazing, and kiln firing, fostering tactile creativity and mindfulness.",
+    image: "/images/tis/pot.6f7c2ee3.webp",
+    frequency: "Weekly Studio Workshops"
+  },
+  {
+    id: "act-dance",
+    title: "Classical Kathak & Contemporary Dance",
+    category: "arts",
+    description: "Rhythm, expression, posture, and choreography training culminating in annual school theatre productions.",
+    image: "/images/tis/dance.88843edb.webp",
+    frequency: "Daily Afternoon Ensembles"
+  },
+  {
+    id: "act-martial-arts",
+    title: "Martial Arts & Self-Defense Dojo",
+    category: "sports",
+    description: "Belt progression, defensive discipline, core agility, and mental focus under certified black belt masters.",
+    image: "/images/tis/karate.4020fba5.webp",
+    frequency: "Early Morning Conditioning"
+  },
+  {
+    id: "act-equestrian",
+    title: "Equestrian & Horse Riding Paddock",
+    category: "sports",
+    description: "Stable management, grooming, trot and canter mastery, and show jumping on trained thoroughbreds.",
+    image: "/images/tis/polo.973ddbae.webp",
+    frequency: "Morning Riding Slots"
+  },
+  {
+    id: "act-aquatics",
+    title: "Semi-Olympic Swimming & Aquatics",
+    category: "sports",
+    description: "Stroke refinement in freestyle, backstroke, breaststroke, and butterfly with water safety training.",
+    image: "/images/tis/swimming.6fc81e65.webp",
+    frequency: "Daily Squad Training"
+  },
+  {
+    id: "act-robotics",
+    title: "Robotics & Innovation Laboratory",
+    category: "clubs",
+    description: "Microcontroller programming, sensor integration, robotic chassis design, and national hackathons.",
+    image: "/images/tis/madeForFuture.e96fe7c1.png",
+    frequency: "Weekend Maker Sessions"
   }
 ];
 

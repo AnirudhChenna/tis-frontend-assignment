@@ -58,3 +58,40 @@ export interface AdmissionStep {
   timeline: string;
   actionLabel: string;
 }
+
+export interface AcademicProgram {
+  id: string;
+  title: string;
+  gradeSpan: string;
+  description: string;
+  keyFeatures: string[];
+  image: string;
+  curriculumBadge: string;
+}
+
+export interface FacilityItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  specs: string;
+}
+
+export interface WhyTISItem {
+  id: string;
+  title: string;
+  shortDesc: string;
+  detailedText: string;
+  icon: string;
+  statBadge?: string;
+}
+
+export interface ActivityItem {
+  id: string;
+  title: string;
+  category: 'arts' | 'sports' | 'clubs' | 'excursions';
+  description: string;
+  image: string;
+  frequency: string;
+}
