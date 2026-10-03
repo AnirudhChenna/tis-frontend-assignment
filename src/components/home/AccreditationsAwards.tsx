@@ -83,7 +83,7 @@ export default function AccreditationsAwards() {
                 key={mentor.id}
                 className="p-4 rounded-lg border border-[#e5ded0] dark:border-[#24314c] bg-[#fdfbf7] dark:bg-[#111827] flex flex-col items-center text-center space-y-3"
               >
-                <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#940a24] dark:border-[#d6b46b] flex-shrink-0">
+                <div className="relative w-20 h-20 rounded-lg overflow-hidden border-2 border-[#940a24] dark:border-[#d6b46b] flex-shrink-0">
                   <Image
                     src={mentor.image}
                     alt={mentor.name}

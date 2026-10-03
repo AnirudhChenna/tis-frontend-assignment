@@ -93,7 +93,7 @@ export default function VerifiedTestimonials() {
 
               {/* Author & Student Details */}
               <div className="pt-4 mt-4 border-t border-[#e5ded0] dark:border-[#24314c] flex items-center gap-3">
-                <div className="relative w-11 h-11 rounded-full overflow-hidden border border-[#c8bda9] dark:border-[#374768] flex-shrink-0 bg-[#f8f5ee] dark:bg-[#162033]">
+                <div className="relative w-11 h-11 rounded-lg overflow-hidden border border-[#c8bda9] dark:border-[#374768] flex-shrink-0 bg-[#f8f5ee] dark:bg-[#162033]">
                   <Image
                     src={review.image}
                     alt={review.parentName}
