@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b90124" />
+      <stop offset="100%" stop-color="#720417" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8cf92" />
+      <stop offset="50%" stop-color="#c09d59" />
+      <stop offset="100%" stop-color="#8d6c29" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Shield -->
+  <path d="M64 6 C88 6 114 14 114 36 C114 80 64 120 64 120 C64 120 14 80 14 36 C14 14 40 6 64 6 Z" fill="url(#shieldBg)" stroke="url(#goldBorder)" stroke-width="6" />
+  
+  <!-- Inner Shield Inset -->
+  <path d="M64 16 C82 16 104 22 104 40 C104 74 64 108 64 108 C64 108 24 74 24 40 C24 22 46 16 64 16 Z" fill="none" stroke="#e8cf92" stroke-width="1.5" stroke-opacity="0.6" />
+  
+  <!-- Torch / Flame Symbol -->
+  <path d="M64 26 C67 31 71 35 69 41 C67 46 62 47 64 53 C64 53 60 49 61 44 C61 39 65 37 64 26 Z" fill="#e8cf92" />
+  
+  <!-- TIS Monogram Text -->
+  <text x="64" y="80" text-anchor="middle" font-family="'Cinzel', 'Times New Roman', Georgia, serif" font-weight="800" font-size="28" fill="#ffffff" letter-spacing="2">TIS</text>
+  
+  <!-- Dehradun Subtext -->
+  <text x="64" y="94" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="8" fill="#e8cf92" letter-spacing="1.5">DEHRADUN</text>
+</svg>
